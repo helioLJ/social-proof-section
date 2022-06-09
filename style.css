@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+:root {
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+
+    --font-family: 'League Spartan', sans-serif;;
+    --font-size: 15px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(./images/bg-pattern-top-desktop.svg), url(./images/bg-pattern-bottom-desktop.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, bottom right;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    padding: 8rem 3rem;
+    margin: auto;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 80%;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero__copy {
+    width: 40%;
+}
+
+.hero__copy___title {
+    color: var(--Very-Dark-Magenta);
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.hero__copy___text {
+    color: var(--Dark-Grayish-Magenta);
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.4rem;
+    padding-right: 2rem;
+}
+
+.hero__rates {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 60%;
+}
+
+.hero__rates___box {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--Light-Grayish-Magenta);
+    border-radius: 10px;
+    width: 70%;
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.hero__rates___box____img {
+    margin-right: 4px;
+}
+
+.hero__rates___box____h2 {
+    color: var(--Very-Dark-Magenta);
+    font-size: 1.1rem;
+    margin-left: 10px;
+}
+
+#rate-box-1 {
+    margin-right: 8rem;
+}
+
+#rate-box-2 {
+    margin-right: 4rem;
+}
+
+.comments {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.comments__card {
+    background-color: var(--Very-Dark-Magenta);
+    border-radius: 10px;
+    padding: 2.5rem;
+}
+
+.comments__card___profile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.comments__card___profile____img {
+    border-radius: 50%;
+    margin-right: 2rem;
+    width: 15%;
+}
+
+.comments__card___profile____info h3 {
+    color: var(--White);
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.comments__card___profile____info h4 {
+    color: var(--Soft-Pink);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.comments__card___quote {
+    color: var(--White);
+    font-weight: 500;
+    line-height: 1.4rem;
+}
+
+#comment-card-1 {
+    margin-right: 2rem;
+}
+
+#comment-card-2 {
+    margin-top: 3rem;
+    margin-right: 2rem;
+}
+
+#comment-card-3 {
+    margin-top: 6rem;
+}
+
+.attribution {
+    color: var(--Dark-Grayish-Magenta);
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.attribution a {
+    color: var(--Soft-Pink);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 1200px) {
+    .hero__rates___box {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        background-image: url(./images/bg-pattern-top-mobile.svg), url(./images/bg-pattern-bottom-mobile.svg);
+        background-repeat: no-repeat, no-repeat;
+        background-position: top left, bottom right;
+        padding: 0;
+        padding-top: 5rem;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero__copy, .hero__rates, .hero__rates___box {
+        width: 100%;
+    }
+
+    .hero__copy___title {
+        font-size: 3rem;
+    }
+
+    .hero__copy___text {
+        font-size: 1rem;
+        padding-right: 0;
+        margin-bottom: 3rem;
+    }
+
+    .hero__rates___box {
+        flex-direction: column;
+    }
+
+    .hero__rates___box____img {
+        margin-bottom: 1rem;
+    }
+
+    .comments {
+        margin-top: 3rem;
+        flex-direction: column;
+    }
+
+    .comments__card {
+        margin-bottom: 2rem;
+    }
+
+    #comment-card-1 {
+        margin-right: 0;
+    }
+    
+    #comment-card-2 {
+        margin-top: 0;
+        margin-right: 0;
+    }
+    
+    #comment-card-3 {
+        margin-top: 0;
+    }
+
+    #rate-box-1, #rate-box-2 {
+        margin-right: 0;
+    }
+
+}
